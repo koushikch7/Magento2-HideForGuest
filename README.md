@@ -5,11 +5,14 @@ version - 2.3.x
 
 ##How to install Extension
 
-1. Download the archive file. 
-2. Unzip the files 
-3. Create a folder path [Magento_Root]/app/code/CHK/HideForGuest 
-4. Drop/move the unzipped files
-
+Git Clone
+	1. Download.Clone the Repository
+	2. Unzip the files 
+	3. Create a folder path [Magento_Root]/app/code/CHK/HideForGuest 
+	4. Drop/move the unzipped files
+Composer Install
+	Redirect to [Magento_Root] and enter ```composer require chk/hideforguest```
+	
 #Enable Extension:
 - php bin/magento module:enable CHK_HideForGuest
 - php bin/magento setup:upgrade
