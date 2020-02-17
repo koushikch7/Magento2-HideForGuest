@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<?php $_product = $block->getProduct() ?>
+
+<?php
+$hideForGuestHelper = $this->helper(\CHK\HideForGuest\Helper\Data::class);
+$allowAddToCart = $hideForGuestHelper->getAllowAddtocart();
+$customButtonTitle = $hideForGuestHelper->getCustomButtonTitle();
+?>
+
+<?php if ($_product->isSaleable() && $block->hasOptions() && ($allowAddToCart || $hideForGuestHelper->isCustomerLoggedIn())):?>
+    <div class="bundle-actions">
+        <button id="bundle-slide"
+                class="action primary customize"
+                type="button">
+            <span><?= /* @escapeNotVerified */ __('Customize and Add to Cart') ?></span>
+        </button>
+    </div>
+<?php endif;?>
+<?php if($customButtonTitle || !$hideForGuestHelper->isCustomerLoggedIn()) { ?>
+    <div class="bundle-actions">
+        <a  class="action tocart primary"
+            href="<?= $block->escapeUrl('customer/account/login'); ?>"
+            title="<?= /* @noEscape */ $customButtonTitle; ?>">
+            <?= /* @noEscape */ $customButtonTitle ?>
+        </a>
+    </div>
+<?php } ?>
+
