@@ -3,6 +3,7 @@
 namespace CHK\HideForGuest\Block\Product;
 
 use Magento\CatalogWidget\Block\Product\ProductsList as WidgetProductList;
+
 /**
  * Class ProductsList
  *

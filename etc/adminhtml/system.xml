@@ -11,25 +11,25 @@
             <resource>CHK_HideForGuest::catalog_custom</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Settings</label>
-                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enable</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="label" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="label" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Label</label>
                     <comment>Leave label as blank if you just want to hide price without having any inquiry button.</comment>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
-				<field id="is_addtocart_allowed" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="is_addtocart_allowed" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Allow Add To Cart</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="enable">1</field>
                     </depends>
                 </field>
-				<field id="is_product_price_disclosed" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+				<field id="is_product_price_disclosed" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Disclose Product Price</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>

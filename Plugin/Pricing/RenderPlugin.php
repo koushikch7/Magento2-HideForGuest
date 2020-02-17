@@ -28,6 +28,7 @@ class RenderPlugin extends Render
      * @param Registry $registry
      * @param Data $helperData
      * @param array $data
+     * @return void
      */
     public function __construct(
         Template\Context $context,
@@ -40,6 +41,8 @@ class RenderPlugin extends Render
     }
 
     /**
+     * Get HTML code of Product Price to Display
+     *
      * @return string
      */
     protected function _toHtml()

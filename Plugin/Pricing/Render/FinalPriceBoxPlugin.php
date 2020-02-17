@@ -42,6 +42,7 @@ class FinalPriceBoxPlugin extends FinalPriceBox
      * @param array $data
      * @param SalableResolverInterface|null $salableResolver
      * @param MinimalPriceCalculatorInterface|null $minimalPriceCalculator
+     * @return void
      */
     public function __construct(
         Context $context,
@@ -56,7 +57,6 @@ class FinalPriceBoxPlugin extends FinalPriceBox
     ) {
         $this->helperData = $helperData;
         $this->productFactory = $productFactory;
-
         parent::__construct(
             $context,
             $saleableItem,
@@ -69,6 +69,8 @@ class FinalPriceBoxPlugin extends FinalPriceBox
     }
 
     /**
+     * Show Range price
+     *
      * @return bool|void
      */
     public function showRangePrice()
@@ -95,8 +97,10 @@ class FinalPriceBoxPlugin extends FinalPriceBox
     }
 
     /**
+     * Return HTML code for product price display
+     *
      * @param string $html
-     * @return string
+     * @return string|void
      */
     protected function wrapResult($html)
     {

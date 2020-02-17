@@ -1,7 +1,6 @@
 <?php
 namespace CHK\HideForGuest\Helper;
 
-use Magento\Catalog\Model\ProductFactory;
 use Magento\Customer\Model\Session;
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
@@ -20,24 +19,17 @@ class Data extends AbstractHelper
     protected $customerSession;
 
     /**
-     * @var ProductFactory
-     */
-    private $productFactory;
-
-    /**
      * Data constructor.
      *
      * @param Context $context
      * @param Session $customerSession
-     * @param ProductFactory $productFactory
+     * @return void
      */
     public function __construct(
         Context $context,
-        Session $customerSession,
-        ProductFactory $productFactory
+        Session $customerSession
     ) {
         $this->customerSession = $customerSession;
-        $this->productFactory = $productFactory;
         parent::__construct($context);
     }
 
@@ -50,7 +42,9 @@ class Data extends AbstractHelper
     }
 
     /**
-     * @return mixed
+     * Get Is HideForGuest Enables/Disabled
+     *
+     * @return bool
      */
     public function getHideForGuestEnabled()
     {
@@ -58,6 +52,8 @@ class Data extends AbstractHelper
     }
 
     /**
+     * Get Custom Button Title
+     *
      * @return string
      */
     public function getCustomButtonTitle()
@@ -66,6 +62,8 @@ class Data extends AbstractHelper
     }
 
     /**
+     * Get Is Allowed Add to Cart Button to Show
+     *
      * @return bool
      */
     public function getAllowAddtocart()
@@ -74,6 +72,8 @@ class Data extends AbstractHelper
     }
 
     /**
+     * Get Is Product Price Disclose
+     *
      * @return bool
      */
     public function getDisclosePrice()
@@ -82,6 +82,8 @@ class Data extends AbstractHelper
     }
 
     /**
+     * Get Is Customer Logged In
+     *
      * @return bool
      */
     public function isCustomerloggedIn()
