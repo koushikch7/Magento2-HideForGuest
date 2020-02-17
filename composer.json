@@ -1,5 +1,5 @@
 {
-    "name": "chk/magento-2-hide-for-guest-extension",
+    "name": "chk/hideforguest",
     "description": "CHK HideForGuest Extension Hide's,  Price and Add To Cart of Magento2 Shop Guest Users",
     "type": "magento2-module",
     "version": "1.0.0",
