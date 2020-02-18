@@ -48,7 +48,7 @@ class RenderPlugin extends Render
     protected function _toHtml()
     {
         $product = $this->getProduct();
-        $disclosePrice = $this->helperData->getDisclosePrice($product->getId());
+        $disclosePrice = $this->helperData->getDisclosePrice();
 
         if ($disclosePrice || $this->helperData->isCustomerloggedIn()) {
             return parent::_toHtml();
