@@ -75,7 +75,7 @@ class FinalPriceBoxPlugin extends FinalPriceBox
      */
     public function showRangePrice()
     {
-        $disclosePrice = $this->helperData->getDisclosePrice($this->getSaleableItem()->getId());
+        $disclosePrice = $this->helperData->getDisclosePrice();
 
         if ($disclosePrice || $this->helperData->isCustomerloggedIn()) {
             /** @var FinalPrice $bundlePrice */
@@ -104,7 +104,7 @@ class FinalPriceBoxPlugin extends FinalPriceBox
      */
     protected function wrapResult($html)
     {
-        $disclosePrice = $this->helperData->getDisclosePrice($this->getSaleableItem()->getId());
+        $disclosePrice = $this->helperData->getDisclosePrice();
 
         if ($disclosePrice || $this->helperData->isCustomerloggedIn()) {
             return parent::wrapResult($html);
